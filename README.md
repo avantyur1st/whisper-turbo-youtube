@@ -203,3 +203,7 @@ Run this cell to execute the transcription of the video. This can take a while a
 ```
 
 **Transcript file created: /content/drive/My Drive/Colab Notebooks/Whisper Youtube/dQw4w9WgXcQ.vtt**
+
+## Acknowledgments
+
+* The original code can be found [here](https://github.com/ArthurFDLR/whisper-youtube). Thanks to the authors for their work!
