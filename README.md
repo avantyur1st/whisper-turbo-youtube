@@ -20,9 +20,9 @@ Make sure you've selected `GPU` as hardware accelerator for the Notebook (Runtim
 
 |  GPU   |  GPU RAM   | FP32 teraFLOPS |     Availability   |
 |:------:|:----------:|:--------------:|:------------------:|
-|  T4    |    16 GB   |       8.1      |         Free       |
-| P100   |    16 GB   |      10.6      |      Colab Pro     |
-| V100   |    16 GB   |      15.7      |  Colab Pro (Rare)  |
+|  T4    |    16 GB   |       8.1      |   Free / Colab Pro |
+|  L4    |    24 GB   |      30.3      |     Colab Pro      |
+| A100   | 40 / 80 GB |      19.5      |  Colab Pro / Pro+  |
 
 ---
 **Factory reset your Notebook's runtime if you want to get assigned a new GPU.**
@@ -57,40 +57,6 @@ Mon Dec  2 11:17:06 2024
 This cell will take a little while to download several libraries, including Whisper.
 
 ---
-
-```
-    Collecting git+https://github.com/openai/whisper.git
-      Cloning https://github.com/openai/whisper.git to /tmp/pip-req-build-h5rg7qi_
-      Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git /tmp/pip-req-build-h5rg7qi_
-      Resolved https://github.com/openai/whisper.git to commit 90db0de1896c23cbfaf0c58bc2d30665f709f170
-      Installing build dependencies ... done
-      Getting requirements to build wheel ... done
-      Preparing metadata (pyproject.toml) ... done
-    Requirement already satisfied: numba in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (0.60.0)
-    Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (1.26.4)
-    Requirement already satisfied: torch in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (2.5.1+cu121)
-    Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (4.66.6)
-    Requirement already satisfied: more-itertools in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (10.5.0)
-    Requirement already satisfied: tiktoken in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (0.8.0)
-    Requirement already satisfied: triton>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (3.1.0)
-    Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from triton>=2.0.0->openai-whisper==20240930) (3.16.1)
-    Requirement already satisfied: llvmlite<0.44,>=0.43.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba->openai-whisper==20240930) (0.43.0)
-    Requirement already satisfied: regex>=2022.1.18 in /usr/local/lib/python3.10/dist-packages (from tiktoken->openai-whisper==20240930) (2024.9.11)
-    Requirement already satisfied: requests>=2.26.0 in /usr/local/lib/python3.10/dist-packages (from tiktoken->openai-whisper==20240930) (2.32.3)
-    Requirement already satisfied: typing-extensions>=4.8.0 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (4.12.2)
-    Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (3.4.2)
-    Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (3.1.4)
-    Requirement already satisfied: fsspec in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (2024.10.0)
-    Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (1.13.1)
-    Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy==1.13.1->torch->openai-whisper==20240930) (1.3.0)
-    Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (3.4.0)
-    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (3.10)
-    Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (2.2.3)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (2024.8.30)
-    Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->torch->openai-whisper==20240930) (3.0.2)
-    Requirement already satisfied: yt-dlp in /usr/local/lib/python3.10/dist-packages (2024.11.18)
-    Using device: cuda:0
-```
 
 # **Optional:** Save images in Google Drive 💾
 Enter a Google Drive path and run this cell if you want to store the results inside Google Drive.
